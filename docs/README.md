@@ -20,18 +20,17 @@
 
 자동차 경주 게임#CarRacingGame
 
-- [ ] 자동차를 초기화 시키는 기능#initCarNameList
-- [ ] 몇 번의 이동을 할 것인지를 입력하는 기능#inputMoveCount
+- [x] 자동차를 초기화 시키는 기능#initCarNameList
 - [ ] 자동차를 전진시키는 기능#carRacigStart
 - [ ] 자동차 경주 게임을 완료한 후 누가 우승했는지 정하는 기능#selectGameWinner
 - [ ] 게임 결과를 반환하는 기능#getGameResult
 
 자동차 게임 컨트롤러#carRacingGameController
 
-- [ ] 자동차 게임 닉네임을 받는 기능
-- [ ] 자동차 게임 횟수를 입력하는 기능
-- [ ] 자동차 게임 진행 화면 출력을 하는 기능
-- [ ] 자동차 게임 결과 화면 출력을 하는 기능
+- [ ] 자동차 게임 닉네임을 받는 기능#inputCarNameList
+- [ ] 자동차 게임 횟수를 입력하는 기능#inputCarRacingGameCount
+- [ ] 자동차 게임 진행 화면 출력을 하는 기능#printCarRacingGameProcess
+- [ ] 자동차 게임 결과 화면 출력을 하는 기능#pirntCarRacingGameResult
 
 생성하는 기능#Generator
 
