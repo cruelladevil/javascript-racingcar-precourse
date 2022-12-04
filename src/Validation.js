@@ -24,6 +24,18 @@ const Validation = {
       throw new Error('자동차 이름은 5자 이하만 가능합니다.');
     }
   },
+
+  validateMoveCount(input) {
+    const count = Number(input);
+
+    Validation.validateNaN(count);
+  },
+
+  validateNaN(count) {
+    if (Number.isNaN(count)) {
+      throw new Error('이동 횟수는 숫자만 입력해주세요.');
+    }
+  },
 };
 
 module.exports = Validation;
