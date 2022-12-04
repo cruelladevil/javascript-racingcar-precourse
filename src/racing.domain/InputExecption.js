@@ -12,7 +12,6 @@ const MENT = {
 const InputException = {
   checkNameList(listStr) {
     nameArr = listStr.split(",");
-    console.log(nameArr, nameArr.length);
     if (nameArr.length < 2) throw exception(MENT.MIN_CAR_COUNT);
     nameArr.map((name) => {
       if (name.length > 5) throw exception(MAX_CAR_NAME);
