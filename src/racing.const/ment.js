@@ -13,4 +13,4 @@ const GAME = {
   },
 };
 
-module.export = GAME;
+module.exports = GAME;
