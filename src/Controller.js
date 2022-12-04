@@ -20,12 +20,17 @@ const Controller = {
     InputView.readMoveCount((input) => {
       const count = Number(input);
 
-      for (let i = 0; i < count; i += 1) {
-        Controller.moveOnce(carGame);
-      }
+      OutputView.printResultHeader();
+      Controller.move(carGame, count);
 
       Controller.end(carGame);
     });
+  },
+
+  move(carGame, count) {
+    for (let i = 0; i < count; i += 1) {
+      Controller.moveOnce(carGame);
+    }
   },
 
   moveOnce(carGame) {
