@@ -26,4 +26,9 @@ describe("자동차 레이싱 게임 테스트", () => {
       expect(result).toEqual(arr);
     });
   });
+
+  test("1등 구하기 테스트", () => {
+    const result = carRacingGame.getGameResult();
+    expect(result).toEqual(["npm"]);
+  });
 });
