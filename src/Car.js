@@ -1,3 +1,5 @@
+const { Random } = require('@woowacourse/mission-utils');
+
 class Car {
   #name;
   #position = 0;
@@ -7,6 +9,11 @@ class Car {
   }
 
   // 추가 기능 구현
+  move() {
+    const randomNumber = Random.pickNumberInRange(0, 9);
+
+    if (randomNumber >= 4) this.#position += 1;
+  }
 }
 
 module.exports = Car;

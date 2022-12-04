@@ -13,6 +13,10 @@ class CarGame {
       this.#cars.push(car);
     });
   }
+
+  moveCars() {
+    this.#cars.forEach((car) => car.move());
+  }
 }
 
 module.exports = CarGame;
