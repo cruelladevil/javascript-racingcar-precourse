@@ -12,6 +12,10 @@ const ViewData = {
   buildPositionMap(position) {
     return '-'.repeat(position);
   },
+
+  buildWinnersViewData(winners) {
+    return winners.join(', ');
+  },
 };
 
 module.exports = ViewData;

@@ -23,13 +23,20 @@ const Controller = {
       for (let i = 0; i < count; i += 1) {
         Controller.moveOnce(carGame);
       }
+
+      Controller.end(carGame);
     });
   },
-  
+
   moveOnce(carGame) {
     carGame.moveCars();
     const mapViewData = ViewData.buildMapViewData(carGame.getResults());
     OutputView.printMap(mapViewData);
+  },
+
+  end(carGame) {
+    const winnersViewData = ViewData.buildWinnersViewData(carGame.getWinners());
+    OutputView.printWinners(winnersViewData);
   },
 };
 

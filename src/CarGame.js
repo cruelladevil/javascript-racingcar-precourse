@@ -21,6 +21,16 @@ class CarGame {
   getResults() {
     return this.#cars.map((car) => car.getResult());
   }
+
+  getWinners() {
+    const results = this.getResults();
+    const positions = results.map(({ position }) => position);
+    const maxPosition = Math.max(...positions);
+
+    return results
+      .filter(({ position }) => position === maxPosition)
+      .map(({ name }) => name);
+  }
 }
 
 module.exports = CarGame;
