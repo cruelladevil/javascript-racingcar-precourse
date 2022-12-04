@@ -1,10 +1,11 @@
+const RACING_GAME = require("../racing.const/game");
 const Car = require("./Car");
 const Generator = require("./GeneratorNumber");
 
 class CarRacingGame {
   #racers = [];
   #count = 0;
-  #gameStatus = 100;
+  #gameStatus = RACING_GAME.STATUS.PLAY;
 
   initCarNameList(listStr) {
     const carList = listStr.split(",");
@@ -20,8 +21,7 @@ class CarRacingGame {
       result = this.racerMoveOnePosition(this.#racers);
       this.#count += 1;
     }
-    //to do : status  상수로 빼기
-    if (this.#count === gamecount) this.#gameStatus = 101;
+    if (this.#count === gamecount) this.#gameStatus = RACING_GAME.STATUS.END;
     return result;
   }
 

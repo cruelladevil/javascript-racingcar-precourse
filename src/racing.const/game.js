@@ -8,6 +8,10 @@ const RACING_GAME = {
     MIN: 0,
   },
   MOVE: "-",
+  STATUS: {
+    PLAY: 100,
+    END: 101,
+  },
 };
 
 module.exports = RACING_GAME;

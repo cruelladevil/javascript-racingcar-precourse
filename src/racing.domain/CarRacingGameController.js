@@ -1,3 +1,4 @@
+const RACING_GAME = require("../racing.const/game");
 const InputView = require("../racing.Input/InputView");
 const OutputView = require("../racing.UI/OutputView");
 const CarRacingGame = require("./CarRacingGame");
@@ -30,8 +31,7 @@ class CarRacingGameController {
 
   printCarRacingGameProcess(result) {
     OutputView.movePrint(result);
-    //to do : status 상수로 빼기
-    while (this.#carRacingGame.getGameStatus() === 100) {
+    while (this.#carRacingGame.getGameStatus() === RACING_GAME.STATUS.PLAY) {
       const result = this.#carRacingGame.carRacigStart(this.#gameCount);
       OutputView.movePrint(result);
     }
