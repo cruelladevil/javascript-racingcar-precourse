@@ -11,12 +11,17 @@ class CarRacingGameController {
   inputCarNameList() {
     InputView.carList((list) => {
       //to do :validation
-      this.#carRacingGame.inputCarNameList(list);
-      this.ininputCarRacingGameCount();
+      this.#carRacingGame.initCarNameList(list);
+      this.inputCarRacingGameCount();
     });
   }
 
-  inputCarRacingGameCount() {}
+  inputCarRacingGameCount() {
+    InputView.gameCount((number) => {
+      //to do :validation
+      this.#carRacingGame.carRacigStart(number);
+    });
+  }
 }
 
 module.exports = CarRacingGameController;

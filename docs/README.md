@@ -27,8 +27,8 @@
 
 자동차 게임 컨트롤러#carRacingGameController
 
-- [ ] 자동차 게임 닉네임을 받는 기능#inputCarNameList
-- [ ] 자동차 게임 횟수를 입력하는 기능#inputCarRacingGameCount
+- [x] 자동차 게임 닉네임을 받는 기능#inputCarNameList
+- [x] 자동차 게임 횟수를 입력하는 기능#inputCarRacingGameCount
 - [ ] 자동차 게임 진행 화면 출력을 하는 기능#printCarRacingGameProcess
 - [ ] 자동차 게임 결과 화면 출력을 하는 기능#pirntCarRacingGameResult
 
