@@ -5,13 +5,11 @@ class CarRacingGame {
 
   initCarNameList(listStr) {
     const carList = listStr.split(",");
-    carList.map((racer) => {
-      const racer = new Car(racer);
+    carList.map((racerInfo) => {
+      const racer = new Car(racerInfo);
       this.#racers.push(racer);
     });
   }
-
-  inputMoveCount(number) {}
 
   carRacigStart(count) {}
 
