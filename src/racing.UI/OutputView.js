@@ -2,6 +2,10 @@ const { Console } = require("@woowacourse/mission-utils");
 const GAME = require("../racing.const/ment");
 
 const OutputView = {
+  errorPrint(error) {
+    Console.print(error.message);
+  },
+
   processPrint() {
     Console.print(GAME.OUTPUT.MOVE_RESULT);
   },
