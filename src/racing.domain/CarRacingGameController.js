@@ -2,6 +2,7 @@ const RACING_GAME = require("../racing.const/game");
 const InputView = require("../racing.Input/InputView");
 const OutputView = require("../racing.UI/OutputView");
 const CarRacingGame = require("./CarRacingGame");
+const InputException = require("./InputExecption");
 
 class CarRacingGameController {
   #carRacingGame;
@@ -13,20 +14,34 @@ class CarRacingGameController {
 
   inputCarNameList() {
     InputView.carList((list) => {
-      //to do :validation
-      this.#carRacingGame.initCarNameList(list);
-      this.inputCarRacingGameCount();
+      try {
+        InputException.checkNameList(list);
+        this.#carRacingGame.initCarNameList(list);
+        this.inputCarRacingGameCount();
+      } catch (error) {
+        OutputView.errorPrint(error);
+        this.inputCarNameList();
+      }
     });
   }
 
   inputCarRacingGameCount() {
     InputView.gameCount((number) => {
-      //to do :validation
-      this.#gameCount = Number(number);
-      const result = this.#carRacingGame.carRacigStart(this.#gameCount);
-      OutputView.processPrint();
-      this.printCarRacingGameProcess(result);
+      try {
+        InputException.checkGameCount(number);
+        this.carRacingStart(number);
+      } catch (error) {
+        OutputView.errorPrint(error);
+        this.inputCarRacingGameCount();
+      }
     });
+  }
+
+  carRacingStart(count) {
+    this.#gameCount = Number(count);
+    OutputView.processPrint();
+    const result = this.#carRacingGame.carRacigStart(this.#gameCount);
+    this.printCarRacingGameProcess(result);
   }
 
   printCarRacingGameProcess(result) {
@@ -35,7 +50,6 @@ class CarRacingGameController {
       const result = this.#carRacingGame.carRacigStart(this.#gameCount);
       OutputView.movePrint(result);
     }
-
     this.pirntCarRacingGameResult();
   }
 
