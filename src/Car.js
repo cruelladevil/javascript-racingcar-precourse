@@ -14,6 +14,13 @@ class Car {
 
     if (randomNumber >= 4) this.#position += 1;
   }
+
+  getResult() {
+    const name = this.#name;
+    const position = this.#position;
+
+    return { name, position };
+  }
 }
 
 module.exports = Car;

@@ -17,6 +17,10 @@ class CarGame {
   moveCars() {
     this.#cars.forEach((car) => car.move());
   }
+
+  getResults() {
+    return this.#cars.map((car) => car.getResult());
+  }
 }
 
 module.exports = CarGame;

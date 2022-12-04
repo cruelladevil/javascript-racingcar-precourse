@@ -1,4 +1,6 @@
 const InputView = require('./InputView');
+const OutputView = require('./OutputView');
+const ViewData = require('./ViewData');
 
 const Controller = {
   run(carGame) {
@@ -23,9 +25,11 @@ const Controller = {
       }
     });
   },
-
+  
   moveOnce(carGame) {
     carGame.moveCars();
+    const mapViewData = ViewData.buildMapViewData(carGame.getResults());
+    OutputView.printMap(mapViewData);
   },
 };
 
