@@ -17,6 +17,7 @@ class CarRacingGame {
     const position = this.#racers[0].getCarPosition();
     let result = [];
     if (position < gamecount) result = this.racerMoveOnePosition(this.#racers);
+    //to do : status  상수로 빼기
     if (position === gamecount) this.#gameStatus = 101;
     return result;
   }
@@ -29,7 +30,7 @@ class CarRacingGame {
         .carMoveFoward()
         .pushMoveResult(Generator.RandomNumber())
         .getCarResult();
-      result.push(name.concat(":", gameResult));
+      result.push(name.concat(" : ", gameResult));
     });
     return result;
   }

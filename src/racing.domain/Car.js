@@ -6,7 +6,7 @@ class Car {
   #moveResult = "";
 
   constructor(name) {
-    this.name = name;
+    this.#name = name;
   }
 
   getCarName() {
@@ -19,11 +19,13 @@ class Car {
 
   carMoveFoward() {
     this.#position += 1;
+    return this;
   }
 
   pushMoveResult(number) {
     if (number >= RACING_GAME.MOVE_CONDITION)
-      this.#moveResult.concat(RACING_GAME.MOVE);
+      this.#moveResult = this.#moveResult.concat(RACING_GAME.MOVE);
+    return this;
   }
 
   getCarResult() {
