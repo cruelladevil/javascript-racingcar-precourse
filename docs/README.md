@@ -22,11 +22,13 @@
 
 - [ ] 자동차를 입력받는 기능#inputCarNameList
 - [ ] 몇 번의 이동을 할 것인지를 입력하는 기능#inputMoveCount
-- [ ] 전진 조건을 생성하는 기능#generateRandomMove
-  - [ ] 전진 조건 : 0에서 9 사이에서 무작위 값을 구한 후 무작위 값이 4 이상일 경우이다.
 - [ ] 자동차를 전진시키는 기능#carRacigStart
 - [ ] 자동차 경주 게임을 완료한 후 누가 우승했는지 정하는 기능#gameWinner
 - [ ] 게임 결과를 반환하는 기능#getcGameResult
+
+생성하는 기능#Generator
+
+- [x] 렌덤숫자를 생성하는 기능#RandomNumber
 
 입출력 분리!
 
