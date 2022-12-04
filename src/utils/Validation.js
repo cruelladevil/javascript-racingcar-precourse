@@ -29,11 +29,18 @@ const Validation = {
     const count = Number(input);
 
     Validation.validateNaN(count);
+    Validation.validatePositive(count);
   },
 
   validateNaN(count) {
     if (Number.isNaN(count)) {
       throw new Error('이동 횟수는 숫자만 입력해주세요.');
+    }
+  },
+
+  validatePositive(count) {
+    if (count < 1) {
+      throw new Error('최소 1회 이상부터 이동할 수 있습니다.');
     }
   },
 };
