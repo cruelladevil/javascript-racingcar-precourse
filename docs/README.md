@@ -12,10 +12,11 @@
 
 차#Car
 
-- [ ] 이름을 내보내는 기능#getCarName
-- [ ] 조건에 따라 앞으로 전진하는 기능#carFoward
-  - [ ] 결과를 추가하는 기능#pushMoveResult
-    - [ ] 결과를 내보내는 기능#getCarResult
+- [x] 이름을 내보내는 기능#getCarName
+- [x] 조건에 따라 앞으로 전진하는 기능#carMoveFoward
+- [x] 결과를 추가하는 기능#pushMoveResult
+- [x] 결과를 내보내는 기능#getCarResult
+- [x] 자동차 포지션을 내보내는 기능#getCarPosition
 
 자동차 경주 게임#CarRacingGame
 
