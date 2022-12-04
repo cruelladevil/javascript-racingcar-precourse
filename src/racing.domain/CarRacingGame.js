@@ -32,7 +32,7 @@ class CarRacingGame {
       const gameResult = racer
         .pushMoveResult(Generator.RandomNumber())
         .getCarResult();
-      result.push(name.concat(gameResult, " : "));
+      result.push(name.concat(" : ", gameResult));
     });
     return result;
   }
@@ -42,15 +42,16 @@ class CarRacingGame {
   }
 
   getGameResult() {
-    const result = selectGameWinner(this.#racers);
-    return result;
+    const result = this.selectGameWinner(this.#racers);
+    return result.map((racer) => racer.getCarName());
   }
 
   selectGameWinner(racers) {
-    const resultArr = racers.sort(
-      (a, b) => a.getGameResult().length - b.getGameResult().length
+    const orderedArr = racers.sort(
+      (a, b) => b.getCarPosition() - a.getCarPosition()
     );
-    return resultArr;
+    const first = orderedArr[0].getCarPosition();
+    return orderedArr.filter((racer) => racer.getCarPosition() === first);
   }
 }
 

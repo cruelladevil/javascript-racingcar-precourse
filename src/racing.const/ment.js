@@ -6,7 +6,7 @@ const GAME = {
   },
   OUTPUT: {
     MOVE_RESULT: "실행 결과\n",
-    WINNER: "최종 우승자 :",
+    WINNER: "최종 우승자 : ",
   },
 };
 
