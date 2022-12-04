@@ -17,14 +17,11 @@ class Car {
     return this.#position;
   }
 
-  carMoveFoward() {
-    this.#position += 1;
-    return this;
-  }
-
   pushMoveResult(number) {
-    if (number >= RACING_GAME.MOVE_CONDITION)
+    if (number >= RACING_GAME.MOVE_CONDITION) {
+      this.#position += 1;
       this.#moveResult = this.#moveResult.concat(RACING_GAME.MOVE);
+    }
     return this;
   }
 
