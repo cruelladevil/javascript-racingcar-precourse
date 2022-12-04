@@ -21,16 +21,18 @@
 자동차 경주 게임#CarRacingGame
 
 - [x] 자동차를 초기화 시키는 기능#initCarNameList
-- [ ] 자동차를 전진시키는 기능#carRacigStart
-- [ ] 자동차 경주 게임을 완료한 후 누가 우승했는지 정하는 기능#selectGameWinner
-- [ ] 게임 결과를 반환하는 기능#getGameResult
+- [x] 자동차를 전진시키는 기능#carRacigStart
+- [x] 자동차 경주 게임을 완료한 후 누가 우승했는지 정하는 기능#selectGameWinner
+- [x] 게임 결과를 반환하는 기능#getGameResult
+- [x] 게임 우승자를 고르는 기능#selectGameWinner
+- [x] 게임 상태를 반환하는 기능#getGameStatus
 
 자동차 게임 컨트롤러#carRacingGameController
 
 - [x] 자동차 게임 닉네임을 받는 기능#inputCarNameList
 - [x] 자동차 게임 횟수를 입력하는 기능#inputCarRacingGameCount
-- [ ] 자동차 게임 진행 화면 출력을 하는 기능#printCarRacingGameProcess
-- [ ] 자동차 게임 결과 화면 출력을 하는 기능#pirntCarRacingGameResult
+- [x] 자동차 게임 진행 화면 출력을 하는 기능#printCarRacingGameProcess
+- [x] 자동차 게임 결과 화면 출력을 하는 기능#pirntCarRacingGameResult
 
 생성하는 기능#Generator
 
@@ -40,18 +42,18 @@
 
 출력 클래스#OutputView
 
-- [ ] 전진 출력#movePrint
-  - [ ] 닉네임과 그에 맞는 자동차 결과 내역이 필요
-- [ ] 게임 결과 출력#gameResultPrint
-  - [ ] 우승자는 한명 또는 여러명일 수 잇다.
-  - [ ] 우승자가 여러 명일 경우 쉼표(,)를 이용하여 구분한다.
+- [x] 전진 출력#movePrint
+  - [x] 닉네임과 그에 맞는 자동차 결과 내역이 필요
+- [x] 게임 결과 출력#gameResultPrint
+  - [x] 우승자는 한명 또는 여러명일 수 잇다.
+  - [x] 우승자가 여러 명일 경우 쉼표(,)를 이용하여 구분한다.
 
 입력 클래스 ( 사전에 입력을 검사 할 수 있게 구현 ) InputView
 
 - "[ERROR]"로 시작하는 에러 메시지를 출력 후 그 부분부터 입력을 다시 받는다.
-- [ ] 자동차의 입력을 받는 기능#carList
+- [x] 자동차의 입력을 받는 기능#carList
   - 자동차 이름은 쉼표(,)를 기준으로 구분하며 이름은 5자 이하만 가능하다.
-- [ ] 게임 횟수를 정하는 기능#gameCount
+- [x] 게임 횟수를 정하는 기능#gameCount
   - 숫자만 입력 가능 하다 (1~ )
 
 ## ✍🏻 입출력 요구사항
