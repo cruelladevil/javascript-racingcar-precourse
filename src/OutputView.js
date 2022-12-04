@@ -14,7 +14,7 @@ const OutputView = {
   },
 
   printWinners(winnersViewData) {
-    Console.print(`${OutputView.WINNERS} ${winnersViewData}`);
+    Console.print(`${OutputView.WINNERS}${winnersViewData}`);
     Console.close();
   },
 
