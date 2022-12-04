@@ -35,6 +35,7 @@ const Controller = {
 
   moveOnce(carGame) {
     carGame.moveCars();
+
     const mapViewData = ViewData.buildMapViewData(carGame.getResults());
     OutputView.printMap(mapViewData);
   },

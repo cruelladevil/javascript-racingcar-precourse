@@ -3,7 +3,7 @@ const { Console } = require('@woowacourse/mission-utils');
 const OutputView = {
   RESULT_HEADER: '\n실행 결과',
   WINNERS: '최종 우승자 : ',
-  ERORR_HEADER: '[ERROR] ',
+  ERROR_HEADER: '[ERROR] ',
 
   printResultHeader() {
     Console.print(OutputView.RESULT_HEADER);
@@ -19,7 +19,7 @@ const OutputView = {
   },
 
   printError(error) {
-    Console.print(`${OutputView.ERORR_HEADER}${error.message}`);
+    Console.print(`${OutputView.ERROR_HEADER}${error.message}`);
   },
 };
 
