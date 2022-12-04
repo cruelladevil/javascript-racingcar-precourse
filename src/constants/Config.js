@@ -1,0 +1,13 @@
+const RANDOM_RANGE = {
+  START_INCLUSIVE: 0,
+  END_INCLUSIVE: 9,
+};
+
+const MOVE_THRESHOLDS = 4;
+const CAR_NAME_RANGE = 5;
+
+module.exports = {
+  RANDOM_RANGE,
+  MOVE_THRESHOLDS,
+  CAR_NAME_RANGE,
+};
