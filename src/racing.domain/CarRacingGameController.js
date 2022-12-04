@@ -23,17 +23,25 @@ class CarRacingGameController {
       //to do :validation
       this.#gameCount = Number(number);
       const result = this.#carRacingGame.carRacigStart(this.#gameCount);
+      OutputView.processPrint();
       this.printCarRacingGameProcess(result);
     });
   }
 
   printCarRacingGameProcess(result) {
     OutputView.movePrint(result);
+    //to do : status 상수로 빼기
     while (this.#carRacingGame.getGameStatus() === 100) {
-      //
       const result = this.#carRacingGame.carRacigStart(this.#gameCount);
       OutputView.movePrint(result);
     }
+
+    this.pirntCarRacingGameResult();
+  }
+
+  pirntCarRacingGameResult() {
+    const gameResult = this.#carRacingGame.getGameResult();
+    OutputView.gameResultPrint(gameResult);
   }
 }
 
