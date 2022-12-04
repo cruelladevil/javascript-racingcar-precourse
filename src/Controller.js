@@ -9,7 +9,13 @@ const Controller = {
     InputView.readCarNames((input) => {
       const names = input.split(',');
       carGame.addCars(names);
+
+      Controller.moveCars(carGame);
     });
+  },
+
+  moveCars(carGame) {
+    InputView.readMoveCount((input) => {});
   },
 };
 
