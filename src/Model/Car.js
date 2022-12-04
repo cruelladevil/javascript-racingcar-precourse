@@ -1,4 +1,5 @@
 const { Random } = require('@woowacourse/mission-utils');
+const { RANDOM } = require('../utils/constants');
 
 class Car {
   #name;
@@ -10,9 +11,12 @@ class Car {
 
   // 추가 기능 구현
   move() {
-    const randomNumber = Random.pickNumberInRange(0, 9);
+    const randomNumber = Random.pickNumberInRange(
+      RANDOM.MIN_NUMBER,
+      RANDOM.MAX_NUMBER,
+    );
 
-    if (randomNumber >= 4) this.#position += 1;
+    if (randomNumber >= RANDOM.MOVE_CONDITION_NUMBER) this.#position += 1;
   }
 
   getResult() {

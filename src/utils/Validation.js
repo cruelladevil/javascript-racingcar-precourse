@@ -1,3 +1,5 @@
+const { CAR_GAME } = require('./constants');
+
 const Validation = {
   validateCarNames(input) {
     const carNames = input.split(',');
@@ -8,8 +10,8 @@ const Validation = {
   },
 
   validateParticipant(carNames) {
-    if (carNames.length === 1) {
-      throw new Error('참가자가 1명 밖에 없습니다.');
+    if (carNames.length === CAR_GAME.MIN_PARTICIPANT) {
+      throw new Error(`참가자가 ${CAR_GAME.MIN_PARTICIPANT}명 밖에 없습니다.`);
     }
   },
 
@@ -20,8 +22,10 @@ const Validation = {
   },
 
   validateCarNameLength(carNames) {
-    if (carNames.some((carName) => carName.length > 5)) {
-      throw new Error('자동차 이름은 5자 이하만 가능합니다.');
+    if (carNames.some((carName) => carName.length > CAR_GAME.MAX_NAME_LENGTH)) {
+      throw new Error(
+        `자동차 이름은 ${CAR_GAME.MAX_NAME_LENGTH}자 이하만 가능합니다.`,
+      );
     }
   },
 
@@ -39,8 +43,10 @@ const Validation = {
   },
 
   validatePositive(count) {
-    if (count < 1) {
-      throw new Error('최소 1회 이상부터 이동할 수 있습니다.');
+    if (count < CAR_GAME.MIN_MOVE_COUNT) {
+      throw new Error(
+        `최소 ${CAR_GAME.MIN_MOVE_COUNT}회 이상부터 이동할 수 있습니다.`,
+      );
     }
   },
 };
